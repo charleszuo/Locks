@@ -1,16 +1,16 @@
 package com.zc.lock;
 
 public class Main {
-	private static Lock lock = new TimeCost(new ArrayLock(150));
+	//private static Lock lock = new TimeCost(new ArrayLock(150));
 	
-	//private static Lock lock = new CLHLock();
+	private static Lock lock = new MCSLock();
 	
 	//private static TimeCost timeCost = new TimeCost(new TTASLock());
 	
 	private static volatile int value = 0;
 	public static void method(){
 		lock.lock();
-		//System.out.println("Value: " + ++value);
+		System.out.println("Value: " + ++value);
 		lock.unlock();
 	}
 	
