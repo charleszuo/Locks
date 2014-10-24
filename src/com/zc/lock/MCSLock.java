@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class MCSLock implements Lock{
 	// 原子变量指向队尾
 	private AtomicReference<QNode> tail;
-	// 两个指针，一个指向自己的Node,一个指向前一个Node
+	
 	ThreadLocal<QNode> myNode;
 	
 	public MCSLock(){
