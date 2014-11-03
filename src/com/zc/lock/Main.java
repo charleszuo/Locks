@@ -3,7 +3,7 @@ package com.zc.lock;
 public class Main {
 	//private static Lock lock = new TimeCost(new ArrayLock(150));
 	
-	private static Lock lock = new TimeoutLock();
+	private static Lock lock = new CompositeLock();
 	
 	//private static TimeCost timeCost = new TimeCost(new TTASLock());
 	
